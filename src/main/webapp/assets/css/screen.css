@@ -1,0 +1,515 @@
+/* TODO: Child selectors will NOT work in IE6. Consider options... */
+
+/* BASIC .................................................. */
+
+/* BLOCK ELEMENTS ......................... */
+
+/* BODY */
+
+body {
+	margin: 0 0 2em 0; /* Remove bottom margin once content is added to footer. */
+	font-size: 62.5%; /* 16px (factory default font size) X 62.5% = 10px. */
+	font-family: "Verdana", "Arial", sans-serif;
+	background: #fff;
+	color: #333;
+	}
+
+/* HEADERS */
+
+h1, h2, h3, h4, h5, h6 {
+	margin: .5em 10px;
+	font-family: "Arial", sans-serif;
+	}
+
+h1 {
+	font-size: 1.7em;
+	}
+
+h2 {
+	font-size: 1.5em;
+	}
+	
+h3 {
+	font-size: 1.3em;
+	}
+	
+h4 {
+	font-size: 1.1em;
+	}
+	
+h5 {
+	font-size: 1.0em;
+	}
+	
+h6 {
+	font-size: 1.0em;
+	font-style: italic;
+	}
+
+/* PARAGRAPHS AND LISTS */
+	
+p {
+	margin: .5em 10px;
+	font-size: 1.2em;
+	}
+	
+ul {
+	margin: .5em 5px;
+	padding: 0 0 0 20px;
+	}
+
+ol {
+	margin-left: 10px;
+	}
+	
+li {
+	margin: .5em 0;
+	font-size: 1.2em;
+	}
+	
+li li {
+	font-size: 1em;
+	}
+
+/* INLINE ELEMENTS ......................... */
+
+a:link {
+	color: #007595;
+	text-decoration: underline;
+	}
+	
+a:visited {
+	color: #006484;
+	text-decoration: underline;
+	}
+	
+a:hover {
+	color: #007595;
+	text-decoration: none;
+	}
+	
+a:active {
+	text-decoration: underline;
+	}
+	
+img {
+	border: 0;
+	}
+
+/* TABLES ......................... */
+
+table,
+tr,
+th,
+td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-collapse: 0;
+	border-spacing: 0;
+	}
+	
+table {
+	clear: both;
+	margin: .5em 10px;
+	border-top: 1px #999 solid;
+	border-left: 1px #999 solid;
+	}
+
+table tr.even {
+	background: #ccc;
+	}
+
+table th {
+	text-align: left;
+	font-weight: bold;
+	background: #dedede;
+	}
+	
+table th, table td {
+	padding: .5em 5px;
+	border-right: 1px #999 solid;
+	border-bottom: 1px #999 solid;
+	vertical-align: top;
+	font-size: 1.2em;
+	}
+	
+table th h3, table td p, table td ul, table td li {
+	margin: 0;
+	font-family: "Verdana", "Arial", sans-serif;
+	font-size: 1em;
+	}
+
+/* CLASSES .................................................. */
+
+.clear {
+	clear: both;
+	}
+	
+.clear span {
+	display: none;
+	}
+	
+/* LAYOUT .................................................. */
+
+/* PAGE ......................... */
+
+/* HEADER ......................... */
+
+#header {
+	margin: 0 0 1em 0;
+	padding: 1em 20px;
+    background: #333;
+    color: #fff;
+	}
+	
+#header h1 {
+	margin: 0;
+	}
+	
+/* MAIN ......................... */
+	
+/* CONTENT ......................... */
+
+#content {
+	margin: 0 20px;
+	}
+
+/* PANELS */
+
+.panel {
+	clear: both;
+	width: 100%;
+	margin: 1em 0;
+	}
+
+/* Panel NAV */
+
+.panel-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	}
+	
+.panel-nav li {
+	float: left;
+	margin: 0 10px 0 0;
+	}
+
+.panel-nav a {
+	display: block;
+	padding: .5em 10px;
+	border: 1px #333 solid;
+	border-bottom: 0;
+	-moz-border-radius-topleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-top-right-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	background: #333;
+	color: #fe0;
+	}
+
+/* Panel MAIN */
+
+.panel-main {
+	border: 1px #999 solid;
+	border-bottom-color: #666;
+	border-left-color: #666;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius-topleft: 0;
+    -webkit-border-top-left-radius: 0;
+	}
+
+/* PANEL 1 */
+
+#panel1 > .panel-main {
+	clear: both;
+	background: #dedede;
+	margin-top: -7px;
+	}
+	
+#panel1 > .panel-main > .block1 {
+	position: relative;
+	top: 0;
+	left: 0;
+	}
+	
+#panel1 > .panel-main > .block2 {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 318px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	}
+
+#panel1 > .panel-main > .block2 > .inside {
+	position: absolute;
+	top: 0;
+	left: 0;
+	}
+
+/* PANEL 2 */
+
+#panel2 > .panel-main {
+	clear: both;
+	min-height: 318px;
+	background: #fff;
+	}
+	
+#panel2 > .panel-main h2 {
+	margin: 2em 10px 0 10px;
+	font-family: "Verdana", "Arial", sans-serif;
+	font-size: 1.2em;
+	}
+	
+#panel2 > .panel-main p {
+	margin-left: 20px;
+	font-size: 1.1em;
+	}
+	
+#panel2 > .panel-main ul {
+	margin-left: 20px;
+	padding-left: 0;
+	list-style: none;
+	}
+	
+#panel2 > .panel-main li {
+	font-size: 1.1em;
+	}
+
+#panel2 > .panel-main table th,
+#panel2 > .panel-main table td {
+	font-size: 1.1em;
+	}
+	
+#panel2 > .panel-main > .block1 {
+	float: left;
+	width: 49%;
+	}
+	
+#panel2 > .panel-main > .block2 {
+	float: right;
+	width: 49%;
+	}
+
+/* STEPS */
+
+.step {
+	float: left;
+	width: 199px;
+	height: 300px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	border-right: 1px #ccc solid;
+	border-bottom: 1px #ccc solid;
+	}
+
+/* Step BLOCK ELEMENTS */
+
+.step h3,
+.step p {
+	margin: 0;
+	padding: .6em 20px .6em 10px;
+	border-bottom: 1px #ccc solid;
+	font-family: "Verdana", "Arial", sans-serif;
+	font-size: 1.1em;
+	}
+
+.step h3 {
+	background: #f6f6f6;
+	}
+	
+.step ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	}
+	
+.step li {
+	margin: 0;
+	font-size: 1.1em;
+	}
+
+.step .no-results {
+	color: #666;
+	}
+
+/* Step ANCHORS */
+	
+.step ul > li > a {
+	display: block;
+	padding: .6em 20px .6em 10px;
+	border-bottom: 1px #ccc solid;
+	text-decoration: none;
+	background: #fff url(../img/arrow_grey.gif) no-repeat 100% 50%;
+	}
+
+.step ul > li > a:hover,
+.step ul > li > a:focus,
+.step ul > li > a.selected,
+.step ul > li > a.selected:hover,
+.step ul > li > a.selected:focus {
+	outline: 0;
+	border-bottom-color: #666;
+	background-color: #888;
+	background-image: url(../img/arrow_white.gif);
+	color: #fff;
+	}
+
+.step ul > li > a.selected:focus,	
+.step ul > li > a.selected {
+	font-weight: bold;
+	background-color: #007595;
+	}
+	
+.step.current ul > li > a.selected {
+	border-bottom-color: #ccc;
+	background-image: url(../img/arrow_grey.gif);
+	background-color: #fe0;
+	color: #444;
+	}
+
+/* STEP 0 */
+
+#step0 {
+	height: 318px;
+	background: #666;
+	color: #fff;
+	}
+
+#step0 > ul > li > a {
+	font-weight: bold;
+	border-bottom-color: #999;
+	background-color: #666;
+	background-image: url(../img/arrow_white.gif);
+	color: #fff;
+	}
+
+#step0 > ul > li > a:hover,
+#step0 > ul > li > a:focus {
+	border-bottom-color: #666;
+	background-color: #444;
+	}
+
+#step0 > ul > li > a.selected {
+	border-bottom-color: #999;
+	background-image: url(../img/arrow_grey.gif);
+	background-color: #fe0;
+	color: #444;
+	}
+
+/* STEP 2 */
+
+#step2 {
+	padding-top: 49px;
+	height: 250px;
+	border-bottom: 1px #ccc solid;
+	}
+
+/* CONCEPT FILTER */
+
+#concept-filter {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 200px;	
+	z-index: 99;
+	width: 182px;
+	height: 50px;
+	border-bottom: 1px #ccc solid;
+	font-size: 1.1em;
+	font-weight: bold;
+	background: #f6f6f6;
+	}
+	
+#concept-filter p {
+	font-size: 1em;
+	}
+	
+#concept-filter input {
+	font-size: 1em;
+	border: 1px #ccc solid;
+	}
+
+.hidden
+{
+	display: none;
+}
+
+
+/* search ......................... */
+
+#searcher .mainGroup { font-weight: bold; }
+#searcher .groupScheme { padding-left: 15px; }
+
+#searcher #step2{padding-top:0;height:299px;}
+#searcher .advanced #step0,
+#searcher .basic #step0
+{
+	display: block;
+	width: 100%;	
+	height: 32px;
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+#searcher .search-mode-simpel,
+#searcher .search-mode-advanced { margin-left: 5px; xcolor: white;}
+#searcher .advanced .search-mode-advanced,
+#searcher .basic .search-mode-simpel,
+#searcher .basic .freesearch-advanced{ display:none; }
+#freesearch-form { padding: 27px 0 0 0; }
+.freesearch-advanced { margin-top: 10px; }
+.freesearch-advanced select { margin-right: 5px;}
+.searchForm
+{
+	background: none repeat scroll 0 0 #666666;
+	border: solid 1px #CCCCCC;
+	padding: 10px 10px;
+}
+.searchForm a,
+.searchForm label { color: white; }
+#freesearch-input { width: 350px; margin-right: 5px;}
+
+#searcher .resultTable
+{
+	width: 98%;	
+	font-size: 0.9em;
+}
+
+.resultTable .ident { width: 20%;}
+.resultTable .voorkeur { width: 35%;}
+.resultTable .talen { width: 10%;}
+.resultTable .concept { width: 10%;}
+
+#searcher h3,
+#searcher #step1 p
+{
+	border: none;	
+	background:#FFFFFF none repeat scroll 0 0;
+}
+
+#searcher #step1 .resultTable .ident { width: 40%;}
+#searcher #step1 .resultTable .voorkeur{ width: 20%;}
+#searcher #step1 .resultTable .talen { width:  15%;}
+#searcher #step1 .resultTable .concept { width: 10%;}
+
+/* FOOTER ......................... */
+
+/*
+#footer {
+	margin: 2em 20px 0 20px;
+	padding: .8em 10px;
+	border: 1px #333 solid;
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-top-right-radius: 5px;
+    background: #333;
+    color: #fff;
+	}
+*/

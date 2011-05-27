@@ -1,0 +1,46 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context           
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+	<context:annotation-config />
+
+	<context:component-scan base-package="vocrep.controllers,vocrep.service">
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Component" />
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Service" />
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Repository" />
+	</context:component-scan>
+	
+	<bean id="appProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="singleton" value="true" />
+
+		<property name="properties">
+			<props>
+				<prop key="catchApiUrl">http://catchplus.tuxic.nl:18080/vas/api</prop>
+				<prop key="resultsLimit">100</prop>
+				<prop key="password">b1f68e36c0b936b96c7c4bc6c4ce2ec80a264c5e</prop>
+				<prop key="pathtofilterschemes">/home/tim/</prop>
+				<!-- <prop key="pathtofilterschemes">c:\\</prop> -->
+			</props>
+		</property>
+	</bean>
+
+	<bean id="cacheManager" autowire="byName"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation">
+			<value>classpath:ehcache.xml</value>
+		</property>
+	</bean>
+	
+	<bean id="servletContext" autowire="byName" class="org.springframework.mock.web.MockServletContext"/>
+
+
+</beans>
