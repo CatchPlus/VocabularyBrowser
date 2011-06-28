@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="voc" %>
 
+<!doctype html>
 <html>
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -30,6 +31,7 @@
     	else if (/level=2/.test(window.location))
     		$('#concept-filter').show();            
     });
-  </script></div>
+  </script>
+</div>
 </body>
 </html>
